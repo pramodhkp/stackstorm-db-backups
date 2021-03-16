@@ -1,0 +1,29 @@
+---
+name: greet
+pack: st2_db_dumper
+runner_type: "local-shell-script"
+description: Get postgres database dump
+enabled: true
+entry_point: dump.sh
+parameters:
+    database_user:
+        type: string
+        description: User of the database in the format user@db_instance_name. E.g., postres@db_instance_name
+        required: true
+        position: 1
+    database_host:
+        type: string
+        description: Database instance's host name. E.g., my-postres.database.azure.com
+        required: true
+        position: 2
+    database_name:
+        type: string
+        description: Name of the database. E.g., my_test_database
+        required: true
+        position: 3
+    password:
+        type: string
+        description: Password of the database
+        required: true
+        secret: true
+        position: 4
