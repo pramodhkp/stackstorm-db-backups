@@ -1,0 +1,7 @@
+---
+name: pg_dump
+pack: st2_db_dumper
+description: "Retrieves postgres DB dump mentioned"
+action_ref: "st2_db_dumper.dump"
+formats:
+  - "dump {{ db_name }} on {{ environment }}"
